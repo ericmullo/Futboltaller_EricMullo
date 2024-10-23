@@ -1,4 +1,7 @@
-﻿namespace Futboltaller.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Futboltaller.Models
 {
     public class Jugador
     {
