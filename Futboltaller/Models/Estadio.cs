@@ -6,5 +6,6 @@
         public string Dirección { get; set; }
         public string Ciudad { get; set; }
         public int Capacidad { get; set; }
+
     }
 }
