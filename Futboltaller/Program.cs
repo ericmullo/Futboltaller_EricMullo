@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Futboltaller.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<FutboltallerContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FutboltallerContext") ?? throw new InvalidOperationException("Connection string 'FutboltallerContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

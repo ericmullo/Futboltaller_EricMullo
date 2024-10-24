@@ -1,0 +1,31 @@
+﻿@model IEnumerable<LigaProMVC.Models.Equipo>
+
+<h1>Equipos de la Liga Pro</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Ciudad</th>
+            <th>Títulos</th>
+            <th>Acepta Extranjeros</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var equipo in Model)
+        {
+            <tr>
+                <td>@equipo.Nombre</td>
+                <td>@equipo.Ciudad</td>
+                <td>@equipo.Títulos</td>
+                <td>@equipo.AceptaExtranjeros</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@equipo.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@equipo.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@equipo.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

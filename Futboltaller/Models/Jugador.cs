@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Futboltaller.Models
+namespace LigaProEcuador.Models
 {
     public class Jugador
     {
@@ -17,5 +17,7 @@ namespace Futboltaller.Models
         public Equipo Equipo { get; set; }
         [ForeignKey("Equipo")]
         public int IdEquipo { get; set; }
+
+
     }
 }

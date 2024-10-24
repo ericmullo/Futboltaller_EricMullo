@@ -1,18 +1,23 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Futboltaller.Models
+namespace LigaProEcuador.Models
 {
     public class Equipo
     {
         [Key]
-         public int Id { get; set; }
+        public int IdEquipo { get; set; }
+
         [MaxLength(100)]
-        public string Nombre { get; set; }
+        public string NombreEquipo { get; set; }
         [MaxLength(100)]
 
-    public string Ciudad { get; set; }
-    public int Títulos { get; set; }
-    public bool AceptaExtranjeros { get; set; }
-    public String Estadio { get; set;}
+
+
+
+        public string CiudadEquipo { get; set; }
+        public int Titulos { get; set; }
+        public string AceptaExtranjeros { get; set; }
+        public string Estadio { get; set; }
+
     }
 }
