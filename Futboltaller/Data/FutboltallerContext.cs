@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Futboltaller.Models;
 
 namespace Futboltaller.Data
 {
-    public class FutboltallerContext : DbContext
+    public class TallerFutbolContext : DbContext
     {
-        public FutboltallerContext (DbContextOptions<FutboltallerContext> options)
-            : base(options)
+        public TallerFutbolContext(DbContextOptions<TallerFutbolContext> options) : base(options)
         {
         }
 
-        public DbSet<Futboltaller.Models.Equipo> Equipo { get; set; } = default!;
-        public DbSet<Futboltaller.Models.Estadio> Estadio { get; set; } = default!;
-        public DbSet<Futboltaller.Models.Jugador> Jugador { get; set; } = default!;
+        public DbSet<Equipo> Equipos { get; set; }
+        public DbSet<Estadio> Estadios { get; set; }
+        public DbSet<Jugador> Jugadores { get; set; }
     }
 }
